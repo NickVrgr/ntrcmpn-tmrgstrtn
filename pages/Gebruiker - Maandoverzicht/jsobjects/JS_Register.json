@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JS_Register",
+    "pageId": "Gebruiker - Maandoverzicht",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tcalcDailyTime: () => {\n\t\t return GetUserRegistrations.data.reduce(function (tot, arr) {\n\t\t\t\treturn tot + moment(arr.end_time,'HH:mm').diff(moment(arr.start_time,'HH:mm'),'hours',true);\n\t\t},0).toFixed(2);\t\n\t}\n\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Gebruiker - Maandoverzicht_JS_Register",
+  "deleted": false,
+  "gitSyncId": "63a043dafe530d260a17b0e9_63a5a2e467086437e017191f"
+}
